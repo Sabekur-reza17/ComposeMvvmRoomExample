@@ -9,7 +9,8 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.sabekur2017.composemvvmroomexample.ui.customComposible.CustomCard
+import com.sabekur2017.composemvvmroomexample.ui.backhandler.BackHandlerExample
+import com.sabekur2017.composemvvmroomexample.ui.customComposible.*
 import com.sabekur2017.composemvvmroomexample.ui.theme.ComposeMvvmRoomExampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,8 +27,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-        CustomCard(name = "Reza custom", color = MaterialTheme.colors.primary)
-
+       // CustomCard(name = "Reza custom", color = MaterialTheme.colors.primary)
+        LazyVerticalGridDemo()
     }
 }
 
@@ -35,7 +36,5 @@ fun MyApp() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ComposeMvvmRoomExampleTheme {
-        CustomCard(name = "Reza preview", color = MaterialTheme.colors.primary)
-    }
+    LazyVerticalGridDemo()
 }
